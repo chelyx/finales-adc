@@ -1,7 +1,7 @@
 # Finales de Arquitectura de Computadoras
 
-Una simple recopilación de finales de Arquitectura de Computadoras.
+### Copia del [repo original](https://github.com/gtala/arquitectura-finales) que tiene la pag de deploy rota.
 
-Para ver la página: [hacé click acá](https://juanqp.github.io/arquitectura-finales)
+Para ver la página: [hacé click acá](https://chelyx.github.io/finales-adc/)
 
-Las modificaciones al archivo `finales.json` son bienvenidos.
+
