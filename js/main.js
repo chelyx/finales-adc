@@ -32,7 +32,10 @@ function ponerPregunta(selector, pregunta, numero)
                 <div class="collapse" id="${numero}">
                     <div class="alert alert-${pregunta.revision ? 'warning' : 'info'}" role="alert">
                     ${pregunta.revision ? '<span class="glyphicon glyphicon-exclamation-sign"></span><strong> En revisión</strong>: Esta pregunta podría no estar 100% correcta.' : ''}
-                    <p><strong>Respuesta: </strong>${pregunta.respuesta}</p> ${pregunta.explicacion ? `<p><strong>Explicación: </strong>${pregunta.explicacion}</p>` : ''}</div>
+                    <p><strong>Respuesta: </strong>${pregunta.respuesta}</p> 
+                    ${pregunta.explicacion ? `<p><strong>Explicación: </strong>${pregunta.explicacion}</p>` : ''}
+                    
+                    </div>
                 </div>
             </div>
         </div>`)
@@ -50,6 +53,18 @@ function ponerSeparador(selector, texto)
         </div>`)
 }
 
+
+function ponerImagen(selector, imgName)
+{
+    $(selector).append(`
+        <div class="row">
+            <div class="col-md-12">
+            <img src="https://chelyx.github.io/finales-adc/images/${imgName}" style="display: block; margin: auto;" />
+            </div>
+        </div>`)
+}
+
+
 function mostrarPreguntas(indice)
 {
     $('#principal').html('')
@@ -62,6 +77,8 @@ function mostrarPreguntas(indice)
     {
         if(pregunta.esSeparador)
             ponerSeparador('#principal', pregunta.texto)
+        else if (pregunta.esImagen)
+            ponerImagen('#principal', pregunta.texto)
         else
             ponerPregunta('#principal', pregunta, i)
         i++
