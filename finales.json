@@ -1,7 +1,7 @@
 {
     "finales": [
         {
-            "nombre": "Final 01/12/2016",
+            "nombre": "Final 1er FEB 2022 ",
             "preguntas": [
                 {
                     "esSeparador": true,
@@ -13,11 +13,11 @@
                 },
                 {
                     "pregunta": "Cuales son las 3 microoperaciones necesarias y consecutivas para que se produzca una escritura en RAM desde CPU. ",
-                    "respuesta": ""
+                    "respuesta": "DIR -> MAR <br> DATA->MDR <br> R/W' -> 0"
                 },
                 {
                     "pregunta": "Cual es la utilidad del registro de banderas o registro de estado en modo real y modo protegido",
-                    "respuesta": ""
+                    "respuesta": "Conocer el estado de la cpu despues de la ultima operacion"
                 },
                 {
                     "pregunta": "Cual es la utilidad de los registros FS y GS",
@@ -36,7 +36,7 @@
                     "respuesta": "Decodificador, 2^n salidas"
                 },
                 {
-                    "pregunta": "Como se denomina el registro que decrementa la ejecucin de la instruccion LOOP para contar las iteraciones realizadas y salir del ciclo cuando su valor llega a cero",
+                    "pregunta": "Como se denomina el registro que decrementa la ejecucion de la instruccion LOOP para contar las iteraciones realizadas y salir del ciclo cuando su valor llega a cero",
                     "respuesta": "CX"
                 },
                 
@@ -45,24 +45,24 @@
                     "texto": "Práctica"
                 },
                 {
-                    "pregunta": "Para acceder a una placa de memoria de 16 chips se utiliza un circuito decodificador que permite seleccionar uno de ellos entre 16. Cada chip esta organizado como una matriz de 2Gx8 de acceso randome y direccionable al byte. <br>1. Cuantos bits de la DF se utilizan como entradas a este decodificador para la seleccion del chip? Cuantos para la seleccion del byte? <br>Cuantos bits tiene la direccion fisica en total? <br>Cuantos GB tiene de capacidad la memoria?",
-                    "respuesta": "AEB00"
+                    "pregunta": "Para acceder a una placa de memoria de 16 chips se utiliza un circuito decodificador que permite seleccionar uno de ellos entre 16. Cada chip esta organizado como una matriz de 2Gx8 de acceso random y direccionable al byte. <br>1. Cuantos bits de la DF se utilizan como entradas a este decodificador para la seleccion del chip? Cuantos para la seleccion del byte? <br>Cuantos bits tiene la direccion fisica en total? <br>Cuantos GB tiene de capacidad la memoria?",
+                    "respuesta": "1. 4 bits para la entrada del decodificador y 31 bits para seleccion del byte <br>2. 35bits <br>3. 32GB"
                 },
                 {
                     "pregunta": "Un procesador está relacionado a una caché asociativa de una via constituida por 8 líneas con 8 bytes cada una (Se describe la misma en la figura abajo), y está relacionado con a una RAM de 512*8. Se realiza un acceso de lectura con la dirección 1F2. Indicar si hay éxito o no. En caso de haber éxito, indicar el valor accedido y en el caso de haber ausencia indicar el número de línea a la cual se produce la sustitución del bloque de RAM accedido." ,
-                    "respuesta":""
+                    "respuesta":"No se encuentra, se actualiza la linea 6"
                 },
                 {
                     "pregunta": "Indique en binario decimal y hexadecimal la dirección física que permite acceder con éxito a la linea identificada con el n° 0 y obtener el byte cuyo contenido es 32" ,
-                    "respuesta": ""
+                    "respuesta": "101000100 -> 144"
                 },
                 {
                     "pregunta": "Para la línea de código presentada a continuación <code> 07C4:0104 XOR BX,BX </code><br><code> 0701:0108 INC BX  </code><br><code> 0704: 010B JC 0100 </code><br>Desconociendo el valor inicial de BX ¿Cual es el valor final de BX? " ,
-                    "respuesta": ""
+                    "respuesta": "BX = 1"
                 },
                 {
-                    "pregunta": "Si el salto se produjo ¿Cuál fue el valor de la bandera S y qué condición representa? "  ,
-                    "respuesta":  ""
+                    "pregunta": "Si el salto se produjo ¿Cuál fue el valor de la bandera C y qué condición representa? "  ,
+                    "respuesta":  "C=0 representa si en la ultima operacion hubo carry"
                 },
                 {
                     "esImagen": true,
@@ -70,6 +70,87 @@
                 }
                 
                 ]
+        },
+        {
+            "nombre": "Final 2019",
+            "preguntas": [
+                {
+                    "esSeparador": true,
+                    "texto": "Teórico"
+                },
+                {
+                    "pregunta":"Desde que lugar se extraen los valores que permiten la restauración de los registros de CPU para una tarea entrante?",
+                    "respuesta": "ESTRUCTURA DE DATOS PILA "
+                },
+                {
+                    "pregunta": "Nombre dos registros de CPU que se utilicen en el campo desplazamiento de una dirección virtual? ",
+                    "respuesta": "EIP ESP"
+                },		
+                {
+                    "pregunta": "Cuál es la finalidad de los registros SI y DI en modo real?",
+                    "respuesta": "I SE UTILIZAN EN DIRECCIONAMIENTO INDEXADO"
+                },
+                {
+                    "pregunta": "Cómo se denominan los registros que se pueden utilizar como registros base" ,
+                    "respuesta": "REGISTROS DE SEGMENTO"
+                },
+                {
+                    "pregunta": "A qué hace referencia el concepto MODO directo por registro o de registro ",
+                    "respuesta":"AL MODO EN EL QUE EL OPERANDO SE ALOJA EN UN REGISTRO DE CPU "
+                },
+                {
+                    "pregunta": "Si el campo EDATA de una instrucción es de 32 bits y aloja un dato (modo inmediato) cuál es su valor máximo entero? Escríbalo en hexadecimal o en potencias de 2 ",
+                    "respuesta":"2 N - 1 "
+                },
+                {
+                    "pregunta": "Qué es un hercio o Hz? ",
+                    "respuesta":"MEDIDA DE FRECUENCIA - CICLOS POR SEGUNDO "
+                },
+                {
+                    "pregunta": "Cómo se denomina la señal que indica la solicitud de atención por parte de un dispositivo externo? ",
+                    "respuesta":"INTR "
+                },
+                {
+                    "pregunta": "Cómo clasificaría una interrupción producida por una división por cero? ",
+                    "respuesta":"I EXCEPCION "
+                },
+                {
+                    "esSeparador": true,
+                    "texto": "Práctica"
+                },
+                {
+                    "pregunta": "Sabiendo que la direccion fisica de la ultima posicion de una memoria es FF FF FF FF Cual es el valor de m de esa memoria si es direccionable al octeto? (o dicho de otra manera de m X 8) m= 4G posiciones",
+                    "respuesta": "32GB"
+                },
+                {
+                    "pregunta": "Indique el correspondiente el rango de direcciones.",
+                    "respuesta": "[0, 232-1]"
+                },
+                {
+                    "pregunta": "Para la línea de código presentada a continuación y considerando un contexto en modo real (o modo 16 bits) 3BB0:0103 MOV AX, [35B0] • Si el valor del DS es AB55 cuál es la dirección física del operando involucrado en ésta instrucción?",
+                    "respuesta": "AEBOO"
+                },
+                {
+                    "pregunta": "Si el valor del SS es 3700 y el valor del SP es FFFE cuál será la dirección segmentada asociada al byte vacío de la pila luego de una instrucción PUSH",
+                    "respuesta": "3700:FFFC"
+                },
+                {
+                    "pregunta": "Si la instrucción siguiente a la descripta se aloja en la dirección física 3BC07, Cual es el tamaño de la instrucción y cuantos bytes le corresponden al código de operación?",
+                    "respuesta": "4 bytes instrucción/ 2 bytes código de operación y 2 bytes del campo de referencia al dato 35B0"
+                },
+                {
+                    "pregunta": "Un proceso que se ejecuta en un sistema con memoria virtual puramente segmentada tiene un primer segmento de código de 4096 bytes.  ¿Qué valor del campo límite del correspondiente descriptor de segmento?",
+                    "respuesta": "01000(16) = 0000 0001 0000 0000 0000 (2)"
+                },
+                {
+                    "pregunta": "¿Qué valor tiene el bit P de presencia cuando la CPU está ejecutando la tercera instrucción?",
+                    "respuesta": "P=1"
+                },
+                {
+                    "pregunta": "Si el valor del campo base correspondiente al mismo descriptor y expresada en hexadecimal es 00 00 10 00. ¿Cuál es la dirección física que correspondería al último byte del segmento?",
+                    "respuesta": "00001FFF"
+                }
+            ]
         }
     ]
 }

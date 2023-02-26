@@ -1,0 +1,14 @@
+Indique el correspondiente el rango de direcciones. 
+[0, 232-1] 
+Para la línea de código presentada a continuación y considerando un contexto en modo real (o modo 16 bits) 3BB0:0103 MOV AX, [35B0] • Si el valor del DS es AB55 cuál es la dirección física del operando involucrado en ésta instrucción? 
+AEBOO 
+Si el valor del SS es 3700 y el valor del SP es FFFE cuál será la dirección segmentada asociada al byte vacío de la pila luego de una instrucción PUSH 
+3700:FFFC 
+Si la instrucción siguiente a la descripta se aloja en la dirección física 3BC07, Cual es el tamaño de la instrucción y cuantos bytes le corresponden al código de operación? 
+4 bytes instrucción/ 2 bytes código de operación y 2 bytes del campo de referencia al dato 35B0 
+Un proceso que se ejecuta en un sistema con memoria virtual puramente segmentada tiene un primer segmento de código de 4096 bytes.  ¿Qué valor del campo límite del correspondiente descriptor de segmento? 
+01000(16) = 0000 0001 0000 0000 0000 (2) 
+¿Qué valor tiene el bit P de presencia cuando la CPU está ejecutando la tercera instrucción? 
+P=1 
+Si el valor del campo base correspondiente al mismo descriptor y expresada en hexadecimal es 00 00 10 00. ¿Cuál es la dirección física que correspondería al último byte del segmento? 
+00001FFF 
