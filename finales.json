@@ -127,7 +127,7 @@
                     "respuesta": "[0, 232-1]"
                 },
                 {
-                    "pregunta": "Para la línea de código presentada a continuación y considerando un contexto en modo real (o modo 16 bits) 3BB0:0103 MOV AX, [35B0] • Si el valor del DS es AB55 cuál es la dirección física del operando involucrado en ésta instrucción?",
+                    "pregunta": "Para la línea de código presentada a continuación y considerando un contexto en modo real (o modo 16 bits) <code>3BB0:0103 MOV AX, [35B0]</code>  Si el valor del DS es AB55 cuál es la dirección física del operando involucrado en ésta instrucción?",
                     "respuesta": "AEBOO"
                 },
                 {
@@ -149,6 +149,164 @@
                 {
                     "pregunta": "Si el valor del campo base correspondiente al mismo descriptor y expresada en hexadecimal es 00 00 10 00. ¿Cuál es la dirección física que correspondería al último byte del segmento?",
                     "respuesta": "00001FFF"
+                }
+            ]
+        },
+        {
+            "nombre": "Final 2019.2",
+            "preguntas": [
+                {
+                    "esSeparador": true,
+                    "texto": "Teoria"
+                },
+                {
+                    "pregunta": "¿Cuáles son los dos criterios que sustentan la alta probabilidad de acierto en memoria cache?",
+                    "respuesta": "VECINDAD ESPACIAL Y TEMPORAL"
+                },
+                {
+                    "pregunta": "Definición genérica para todos los tipos de error que pueden generar las instrucciones que operan datos en convenio de punto flotante TFFF, 754",
+                    "respuesta": "EXCEPCION"
+                },
+                {
+                    "pregunta": "Indique como mínimo cuatro unidades que constituyen el procesador Pentium",
+                    "respuesta": "SUBSISTEMA CACHE UNIDAD DE ENTEROS SUPERESCALAR FPU SISTEMA DE PREDICCION DE SALTOS Y BIU"
+                },
+                {
+                    "pregunta": "Registros de 32 bits que se asocian al acceso modo de direccionamiento indexado",
+                    "respuesta": "EDI ESI"
+                },
+                {
+                    "pregunta": "Modo de direccionamiento en el que el operando se encuentra directamente definido en el campo de referencia a dato de la instrucción, dé un ejemplo.",
+                    "respuesta": "INMEDIATO"
+                },
+                {
+                    "pregunta": "Memoria ultrarrápida que guarda la dirección lineal y la dirección fisica de las últimas 32 páginas de código accedidas",
+                    "respuesta": "TLB"
+                },
+                {
+                    "pregunta": "Método de sustitución de una línea de cache en una organización de correspondencia directa o asociativa de una vía.",
+                    "respuesta": "NINGUNO"
+                },
+                {
+                    "pregunta": "Indique la denominación genérica para las peticiones de interrupción de los periféricos al PIC que permiten determinar la prioridad del mismo para ser atendido.",
+                    "respuesta": "IRQ"
+                },
+                {
+                    "esSeparador": true,
+                    "texto": "Practica"
+                },
+                {
+                    "pregunta": "Convierta la siguiente cadena hexadecimal a notación little endian. 87654321",
+                    "respuesta": "21436587"
+                },
+                {
+                    "pregunta": "Si el resultado obtenido se interpreta como el contenido de un vector de interrupción en modo real ¿Que información se ahnacenara en el CS y que información en el IP cuando se convoque al servicio apuntado?",
+                    "respuesta": "CS =2163 IP =6587"
+                },
+                {
+                    "pregunta": "¿En cuantos frames de página se puede dividir una memoria de 6G si la página es de 4K ?",
+                    "respuesta": "6/4 M"
+                },
+                {
+                    "pregunta": "Si un bloque de código ocupa 4098 bytes ¿cuántas páginas utiliza?",
+                    "respuesta": "2"
+                },
+                {
+                    "pregunta": "Un proceso que se ejecuta en un sistema con memoria virtual con segmentos paginados.¿Qué atributo determina que este segmento esta paginado y qué información brinda el descriptor de segmento en su campo limite?",
+                    "respuesta": "BIT G / CANTIDAD DE PAGINAS"
+                },
+                {
+                    "pregunta": "Si en solo una de las entradas de una Tabla Directorio de Paginas se cuenta con información valida (o referente a tablas de pagina) ¿a cuántas tablas de página se puede acceder?",
+                    "respuesta": "A UNA"
+                },
+                {
+                    "pregunta": "Para la propuesta anterior ¿A cuantas paginas se podría ser acceder como maximo considerando que el campo puntero (o índice) de tabla de pagina es de 10 bits?",
+                    "respuesta": "1024 PAGINAS"
+                },
+                {
+                    "pregunta": "Para la propuesta anterior ¿Cuál sería la capacidad máxima de almacenamiento que se puede administrar si las páginas son de 8K?",
+                    "respuesta": "8 M"
+                }
+            ]
+        },
+        {
+            "nombre": "Final3-2019",
+            "preguntas": [
+                {
+                    "esSeparador": true,
+                    "texto": "teoria"
+                },
+                {
+                    "pregunta": "Cómo se denomina la estructura de datos que se utiliza en determinadas ocasiones, para resguardar el contenido de los registros de CPU",
+                    "respuesta": "Pila o Stack"
+                },
+                {
+                    "pregunta": "Cuál es el nombre genérico de la técnica para actualizar la memoria principal desde caché. Cuál es la denominación particular cuando se escribe en MP al mismo tiempo que en caché.",
+                    "respuesta": "Política de Escritura // Write through o escritura inmediata"
+                },
+                {
+                    "pregunta": "Cuál es la fmalidad de los \"registros de segmento\" en modo real y en modo protegido?",
+                    "respuesta": "En modo real contienen la entidad \"base\" de la dirección segmentada// En modo protegido contiene el selector."
+                },
+                {
+                    "pregunta": "Cómo se denomina el registro que actúa como \"contador de programa\" o \"puntero de instrucción y de cuántos bits puede constar?",
+                    "respuesta": "IP (Instruction Pointer, de 16 bits) // EIP (Extended IP de 32 bits)"
+                },
+                {
+                    "pregunta": "Donde se encuentra el operando cuando se utiliza direccionamiento inmediato?",
+                    "respuesta": "En la misma instrucción, como referencia de operando."
+                },
+                {
+                    "pregunta": "Qué es el Buffer de Traducción Anticipada yb qué información se guarda en este dispositivo?",
+                    "respuesta": "Es una memoria de reducida capacidad que guarda dirección lineal y la dirección física de las últimas 32 páginas de código accedidas dentro de un microprocesador"
+                },
+                {
+                    "pregunta": "En qué unidad se mide el ciclo completo de una instrucción?",
+                    "respuesta": "En ciclos de reloj"
+                },
+                {
+                    "pregunta": "Cómo se denomina la señal de respuesta de la CPU a la solicitud de atención por parte de un dispositivo externo. Qué módulo especial gestiona las señales provenientes del entorno de dispositivos ?",
+                    "respuesta": "INTA (Interrupt Aknowledge) // La gestión la realiza el APIC"
+                },
+                {
+                    "pregunta": "Cómo se denomina el parámetro que indica la cantidad de bits que se transmiten por unidad de tiempo a través de un bus yen qué unidades se mide?",
+                    "respuesta": "Velocidad de transferencia. Se mide en Megabit/s o Gigabit/s"
+                },
+                {
+                    "esSeparador": true,
+                    "texto": "practica"
+                },
+                {
+                    "pregunta": "Sabiendo que una CPU genera una dirección de 34 bits que permiten acceder a la memoria principal Cuál es el tamaño potencial de la memoria principal",
+                    "respuesta": "16 Giga"
+                },
+                {
+                    "pregunta": "¿Cuántos bits son significativos para direccionar una memoria DRAM de 8 Gigabytes?",
+                    "respuesta": "33 bits"
+                },
+                {
+                    "pregunta": "Si el total de los 8 Giga están distribuidos en cuatro placas de 8 chips cada una ¿Cómo esta armada la matriz de inX8 en cada chip y cual es la capacidad de cada uno?",
+                    "respuesta": "Es de 256MX8 y tiene una capacidad de 256 MB"
+                },
+                {
+                    "pregunta": "Un proceso que se ejecuta en un sistema con memoria virtual puramente segmentada tiene un primer segmento de código de 4096 bytes.¿Cuánto vale el campo el campo P de presencia cuando el programa está ejecutando la tercera instrucción?",
+                    "respuesta": "Bit P de presencia activo o en 1"
+                },
+                {
+                    "pregunta": "¿Qué valor de la entidad \"selector\" de la dirección virtual permite acceder al segmento?",
+                    "respuesta": "El Indice de Tabla —TI, bit 2 del selector que estaré en 0, indicando que la Tabla de Descriptores es Local"
+                },
+                {
+                    "pregunta": "¿Qué valor tiene el bit G de Granulaiidad?",
+                    "respuesta": "Desactivado en 0, ya que el tamaño máximo del segmento se expresa en bytes"
+                },
+                {
+                    "pregunta": "Si la base alojada en su descriptor y expresada en hexadecimal es 32 42 70 00.",
+                    "respuesta": "¿Cuál es la dirección física que correspondería al Ultimo byte del segmento?"
+                },
+                {
+                    "pregunta": "32 42 70 00 + FFFF = 32 42 7F FF",
+                    "respuesta": "Para la línea de código presentada a continuación <code>AB55:0103 MOV AX, [AAAA]</code> Si la instrucción siguiente a la descripta se aloja en la dirección física AB656 Cual es el tamaño de la instrucción y cuantos bytes le corresponden al código de operación?"
                 }
             ]
         }

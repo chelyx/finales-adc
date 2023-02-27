@@ -1,14 +1,37 @@
-Indique el correspondiente el rango de direcciones. 
-[0, 232-1] 
-Para la línea de código presentada a continuación y considerando un contexto en modo real (o modo 16 bits) 3BB0:0103 MOV AX, [35B0] • Si el valor del DS es AB55 cuál es la dirección física del operando involucrado en ésta instrucción? 
-AEBOO 
-Si el valor del SS es 3700 y el valor del SP es FFFE cuál será la dirección segmentada asociada al byte vacío de la pila luego de una instrucción PUSH 
-3700:FFFC 
-Si la instrucción siguiente a la descripta se aloja en la dirección física 3BC07, Cual es el tamaño de la instrucción y cuantos bytes le corresponden al código de operación? 
-4 bytes instrucción/ 2 bytes código de operación y 2 bytes del campo de referencia al dato 35B0 
-Un proceso que se ejecuta en un sistema con memoria virtual puramente segmentada tiene un primer segmento de código de 4096 bytes.  ¿Qué valor del campo límite del correspondiente descriptor de segmento? 
-01000(16) = 0000 0001 0000 0000 0000 (2) 
-¿Qué valor tiene el bit P de presencia cuando la CPU está ejecutando la tercera instrucción? 
-P=1 
-Si el valor del campo base correspondiente al mismo descriptor y expresada en hexadecimal es 00 00 10 00. ¿Cuál es la dirección física que correspondería al último byte del segmento? 
-00001FFF 
+teoria
+Cómo se denomina la estructura de datos que se utiliza en determinadas ocasiones, para resguardar el contenido de los registros de CPU 
+Pila o Stack 
+Cuál es el nombre genérico de la técnica para actualizar la memoria principal desde caché. Cuál es la denominación particular cuando se escribe en MP al mismo tiempo que en caché. 
+Política de Escritura // Write through o escritura inmediata 
+Cuál es la fmalidad de los "registros de segmento" en modo real y en modo protegido? 
+En modo real contienen la entidad "base" de la dirección segmentada// En modo protegido contiene el selector. 
+Cómo se denomina el registro que actúa como "contador de programa" o "puntero de instrucción y de cuántos bits puede constar? 
+IP (Instruction Pointer, de 16 bits) // EIP (Extended IP de 32 bits) 
+Donde se encuentra el operando cuando se utiliza direccionamiento inmediato? 
+En la misma instrucción, como referencia de operando. 
+Qué es el Buffer de Traducción Anticipada yb qué información se guarda en este dispositivo? 
+Es una memoria de reducida capacidad que guarda dirección lineal y la dirección física de las últimas 32 páginas de código accedidas dentro de un microprocesador 
+En qué unidad se mide el ciclo completo de una instrucción? 
+En ciclos de reloj 
+Cómo se denomina la señal de respuesta de la CPU a la solicitud de atención por parte de un dispositivo externo. Qué módulo especial gestiona las señales provenientes del entorno de dispositivos ? 
+INTA (Interrupt Aknowledge) // La gestión la realiza el APIC 
+Cómo se denomina el parámetro que indica la cantidad de bits que se transmiten por unidad de tiempo a través de un bus yen qué unidades se mide? 
+Velocidad de transferencia. Se mide en Megabit/s o Gigabit/s 
+practica
+Sabiendo que una CPU genera una dirección de 34 bits que permiten acceder a la memoria principal Cuál es el tamaño potencial de la memoria principal 
+16 Giga 
+¿Cuántos bits son significativos para direccionar una memoria DRAM de 8 Gigabytes? 
+33 bits 
+Si el total de los 8 Giga están distribuidos en cuatro placas de 8 chips cada una ¿Cómo esta armada la matriz de inX8 en cada chip y cual es la capacidad de cada uno? 
+Es de 256MX8 y tiene una capacidad de 256 MB
+Un proceso que se ejecuta en un sistema con memoria virtual puramente segmentada tiene un primer segmento de código de 4096 bytes.¿Cuánto vale el campo el campo P de presencia cuando el programa está ejecutando la tercera instrucción? 
+Bit P de presencia activo o en 1
+¿Qué valor de la entidad "selector" de la dirección virtual permite acceder al segmento?
+El Indice de Tabla —TI, bit 2 del selector que estaré en 0, indicando que la Tabla de Descriptores es Local
+¿Qué valor tiene el bit G de Granulaiidad? 
+Desactivado en 0, ya que el tamaño máximo del segmento se expresa en bytes
+Si la base alojada en su descriptor y expresada en hexadecimal es 32 42 70 00. 
+¿Cuál es la dirección física que correspondería al Ultimo byte del segmento? 
+32 42 70 00 + FFFF = 32 42 7F FF
+Para la línea de código presentada a continuación <code>AB55:0103 MOV AX, [AAAA]</code> Si la instrucción siguiente a la descripta se aloja en la dirección física AB656 Cual es el tamaño de la instrucción y cuantos bytes le corresponden al código de operación? 
+El tamaño es de 3 bytes y el código de operación ocupa 1 byte
