@@ -232,7 +232,7 @@
             "preguntas": [
                 {
                     "esSeparador": true,
-                    "texto": "teoria"
+                    "texto": "Teoria"
                 },
                 {
                     "pregunta": "Cómo se denomina la estructura de datos que se utiliza en determinadas ocasiones, para resguardar el contenido de los registros de CPU",
@@ -243,7 +243,7 @@
                     "respuesta": "Política de Escritura // Write through o escritura inmediata"
                 },
                 {
-                    "pregunta": "Cuál es la fmalidad de los \"registros de segmento\" en modo real y en modo protegido?",
+                    "pregunta": "Cuál es la finalidad de los \"registros de segmento\" en modo real y en modo protegido?",
                     "respuesta": "En modo real contienen la entidad \"base\" de la dirección segmentada// En modo protegido contiene el selector."
                 },
                 {
@@ -255,7 +255,7 @@
                     "respuesta": "En la misma instrucción, como referencia de operando."
                 },
                 {
-                    "pregunta": "Qué es el Buffer de Traducción Anticipada yb qué información se guarda en este dispositivo?",
+                    "pregunta": "Qué es el Buffer de Traducción Anticipada y qué información se guarda en este dispositivo?",
                     "respuesta": "Es una memoria de reducida capacidad que guarda dirección lineal y la dirección física de las últimas 32 páginas de código accedidas dentro de un microprocesador"
                 },
                 {
@@ -267,7 +267,7 @@
                     "respuesta": "INTA (Interrupt Aknowledge) // La gestión la realiza el APIC"
                 },
                 {
-                    "pregunta": "Cómo se denomina el parámetro que indica la cantidad de bits que se transmiten por unidad de tiempo a través de un bus yen qué unidades se mide?",
+                    "pregunta": "Cómo se denomina el parámetro que indica la cantidad de bits que se transmiten por unidad de tiempo a través de un bus y en qué unidades se mide?",
                     "respuesta": "Velocidad de transferencia. Se mide en Megabit/s o Gigabit/s"
                 },
                 {
@@ -283,7 +283,7 @@
                     "respuesta": "33 bits"
                 },
                 {
-                    "pregunta": "Si el total de los 8 Giga están distribuidos en cuatro placas de 8 chips cada una ¿Cómo esta armada la matriz de inX8 en cada chip y cual es la capacidad de cada uno?",
+                    "pregunta": "Si el total de los 8 Giga están distribuidos en cuatro placas de 8 chips cada una ¿Cómo esta armada la matriz de mX8 en cada chip y cual es la capacidad de cada uno?",
                     "respuesta": "Es de 256MX8 y tiene una capacidad de 256 MB"
                 },
                 {
@@ -295,16 +295,16 @@
                     "respuesta": "El Indice de Tabla —TI, bit 2 del selector que estaré en 0, indicando que la Tabla de Descriptores es Local"
                 },
                 {
-                    "pregunta": "¿Qué valor tiene el bit G de Granulaiidad?",
+                    "pregunta": "¿Qué valor tiene el bit G de Granularidad?",
                     "respuesta": "Desactivado en 0, ya que el tamaño máximo del segmento se expresa en bytes"
                 },
                 {
-                    "pregunta": "Si la base alojada en su descriptor y expresada en hexadecimal es 32 42 70 00.",
-                    "respuesta": "¿Cuál es la dirección física que correspondería al Ultimo byte del segmento?"
+                    "pregunta": "Si la base alojada en su descriptor y expresada en hexadecimal es 32 42 70 00.¿Cuál es la dirección física que correspondería al Ultimo byte del segmento?",
+                    "respuesta": "32 42 70 00 + FFFF = 32 42 7F FF"
                 },
                 {
-                    "pregunta": "32 42 70 00 + FFFF = 32 42 7F FF",
-                    "respuesta": "Para la línea de código presentada a continuación <code>AB55:0103 MOV AX, [AAAA]</code> Si la instrucción siguiente a la descripta se aloja en la dirección física AB656 Cual es el tamaño de la instrucción y cuantos bytes le corresponden al código de operación?"
+                    "pregunta": "Para la línea de código presentada a continuación <code>AB55:0103 MOV AX, [AAAA]</code> Si la instrucción siguiente a la descripta se aloja en la dirección física AB656 Cual es el tamaño de la instrucción y cuantos bytes le corresponden al código de operación?",
+                    "respuesta": "El tamaño es de 3 bytes y el codigo de operacion ocupa 1 byte"
                 }
             ]
         },
