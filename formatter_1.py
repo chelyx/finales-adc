@@ -2,6 +2,7 @@
 import json
 import copy
 
+import os
 import sys
 
 print('cmd entry:', sys.argv)
@@ -30,13 +31,21 @@ with open(filename) as fh:
             d = {}
         i=i+1
     
-final = {
+final_nuevo = {
     "nombre": name,
     "preguntas": list
 }
 
-# creating json file
-# the JSON file is named as test1
-out_file = open("test1.json", "w")
-json.dump(final, out_file, indent = 4, sort_keys = False, ensure_ascii=False)
-out_file.close()
+aux = open("aux.json", "w")
+
+with open("finales.json") as finalesBD:
+    finales = json.load(finalesBD)
+    finales['finales'].append(final_nuevo)
+
+    json.dump(finales, aux, indent = 4, sort_keys = False, ensure_ascii=False)
+
+finalesBD.close()
+aux.close()
+
+os.remove("finales.json")
+os.rename("aux.json", "finales.json")
